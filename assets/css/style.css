@@ -1,0 +1,285 @@
+/**
+ * @description:
+ * nickName: 在虎
+ * email: caiths@icloud.com
+ * wechat: ConsoleWarn
+ * 尊重原创，请保留版权！
+ * @author mdo
+ * @date 2024/02/02
+ */
+html,
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: "GEETYPE";
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  user-select: none;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.textButton {
+  display: flex;
+  align-content: center;
+  color: #444;
+  border: none;
+  cursor: pointer;
+  height: min-content;
+  width: min-content;
+  text-align: center;
+  font-size: 0.27rem;
+  transition: 0.125s;
+}
+
+.textButton .text {
+  margin-left: 0.4rem;
+}
+
+.centerContent {
+  height: calc(100% - 0.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.25rem;
+}
+
+#top {
+  display: flex;
+  flex-direction: column;
+}
+
+#top .logo {
+  font-weight: normal;
+  cursor: pointer;
+  text-align: left;
+}
+
+#top .logo .text {
+  position: relative;
+  font-size: 0.7rem;
+}
+
+#center {
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+  margin-top: 0.7rem;
+}
+
+.score .count {
+  width: min-content;
+  transition: all 0.1s cubic-bezier(0.5, 0.35, 0.15, 1.4);
+  transform: scale(1);
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.score .subtitle {
+  font-size: 0.5rem;
+  color: #444;
+  line-height: 0.7rem;
+}
+
+#center {
+  display: flex;
+  justify-content: center;
+}
+
+#center .woodenFish {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s cubic-bezier(0.5, 0.35, 0.15, 1.4);
+  transform: scale(1);
+}
+
+#bottom {
+  color: #444;
+  font-size: 0.2rem;
+  padding: 0 0.08rem;
+  position: relative;
+  text-align: center;
+}
+
+#bottom .keyTips {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom .keyTips key {
+  color: #111;
+  background-color: #444;
+  margin: 0.09rem 0.12rem;
+  border-radius: 0.09rem;
+  padding: 0.05rem 0.13rem;
+  line-height: 0.2rem;
+}
+
+#bottom .leftRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.24rem;
+}
+
+#bottom .left {
+  font-size: 0.2rem;
+}
+
+#bottom .left:hover {
+  color: #eee;
+}
+
+#bottom .right a {
+  width: 100%;
+}
+
+#bottom .textButton:hover {
+  color: #eee;
+}
+
+.autoClick {
+  margin-left: 0.17rem;
+  text-decoration: underline;
+  padding: 0.08rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.autoClick.confirm {
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 0.06rem;
+}
+
+.subtitleCountTip {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  font-size: 0.27rem;
+  animation: countTipMove 1s;
+  opacity: 0;
+}
+
+@keyframes countTipMove {
+  from {
+    top: -0.68rem;
+    opacity: 1;
+  }
+  to {
+    top: -1.37rem;
+    opacity: 0;
+  }
+}
+
+.centerContent #center {
+  position: relative;
+}
+
+@font-face {
+  font-family: GEETYPE;
+  src: url(../font/GEETYPE.ttf);
+}
+
+#loading {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  color: #eee;
+  font-size: 0.34rem;
+}
+
+.advert {
+  z-index: 998;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+@keyframes shake {
+  0% {
+      transform: perspective(500px) rotateX(0) rotateY(0) rotateZ(0) scale(1);
+  }
+  25% {
+      transform: perspective(500px) rotateX(5deg) rotateY(-5deg)
+          rotateZ(-5deg) scale(0.95);
+  }
+  50% {
+      transform: perspective(500px) rotateX(0) rotateY(0) rotateZ(0) scale(1);
+  }
+  75% {
+      transform: perspective(500px) rotateX(-5deg) rotateY(5deg) rotateZ(5deg)
+          scale(0.95);
+  }
+  100% {
+      transform: perspective(500px) rotateX(0) rotateY(0) rotateZ(0) scale(1);
+  }
+}
+
+.advert .img {
+  text-align: center;
+}
+
+.advert .img img {
+  animation: shake 2s infinite;
+  box-shadow: #e6e6e6 1px 3px 3px 1px;
+}
+
+.advert .close {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.advert .close .text {
+  display: inline-block;
+  border: 1px solid #000000;
+  font-size: 16px;
+  color: #000000;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .advert .img img {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .advert .img img {
+    width: 80%;
+  }
+}
